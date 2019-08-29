@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="FREE CRM Application Test Suite" parallelxmlns="default namespace">
+
+	<parameter name="test1" value="Hello!! It me!!"></parameter>
+	<listeners>
+		<listener
+			class-name="com.qa.ExtentReportListener.ExtentReporterNG" />
+	</listeners>
+
+
+	<test name="Free CRM App Test Cases">
+		<groups>
+			<dependencies>
+				<group name="c" depends-on="a  b" />
+				<group name="z" depends-on="c" />
+			</dependencies>
+		</groups>
+
+		<classes>
+			<class name="com.crm.testcases.LoginPageTest"></class>
+			<class name="com.crm.testcases.HomePageTest"></class>
+			<class name="com.crm.testcases.ContactsPageTest"></class>
+			<class name="com.crm.testcases.LandingPageTest"></class>
+		</classes>
+	</test>
+</suite>
